@@ -1,0 +1,10 @@
+server:
+  port: 9965
+security:
+  oauth2:
+    client:
+      clientId: notification-service
+      clientSecret: admin
+      accessTokenUri: http://localhost:5000/uaa/oauth/token
+      grant-type: client_credentials
+      scope: server

@@ -8,12 +8,15 @@ import org.springframework.web.bind.annotation.RestController;
  * Created by lout on 2017/4/12.
  */
 @RestController
-@RequestMapping("/sample")
 public class DemoController {
 
-    @RequestMapping("/result")
+    @RequestMapping("/admin")
     public String getResult(){
-        return "success";
+        return "admin-success";
     }
 
+    @RequestMapping("/person/me")
+    public String getResults(){
+        return "user-success";
+    }
 }

@@ -3,9 +3,13 @@ server:
 security:
   oauth2:
     resource:
-      user-info-uri: http://localhost:5001/uaa/oauth/user/current
-      id: user
-      prefer-token-info: false
+      user-info-uri: http://localhost:5001/uaa/user/current
+    client:
+      access-token-uri: http://localhost:5001/uaa/oauth/token
+      user-authorization-uri: http://localhost:5001/uaa/oauth/authorize
+      grant-type: password
+      client-id: foo
+      client-secret: foosecret
   sessions: stateless
 
 spring:
